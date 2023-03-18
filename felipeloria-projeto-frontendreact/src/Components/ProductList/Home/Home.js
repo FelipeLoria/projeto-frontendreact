@@ -1,7 +1,14 @@
+import { useState } from "react"
 import ProductCard from "../ProductCard/ProductCard"
 import { HomeContainer, Produtos, Ordenação, Title, Cards } from "./HomeStyled"
 
-export function Home ({productList}) {
+export function Home ({productList, amount, setAmount, cart, setCart}) {
+
+    const [ordination, setOrdination] = useState ("crescente")
+
+    const onChangeOrdination = (event) => {
+        setOrdination(event.target.value)
+    }
 
     return (
         <HomeContainer>
@@ -9,7 +16,10 @@ export function Home ({productList}) {
             <Produtos>
                 <Ordenação>
                     <p>Ordenação</p>
-                    <button>Crescente</button>
+                    <select onChange={onChangeOrdination} name="tipo" id="tipo">
+                        <option value="crescente">Crescente</option>
+                        <option value="decrescente">Decrescente</option>
+                    </select>
                 </Ordenação>
             </Produtos>
             <Cards>
@@ -18,6 +28,10 @@ export function Home ({productList}) {
                         <ProductCard
                             key={productList.id}
                             productList={productList}
+                            amount={amount}
+                            setAmount={setAmount}
+                            cart={cart}
+                            setCart={setCart}
                         ></ProductCard>
                     )
                 })}
