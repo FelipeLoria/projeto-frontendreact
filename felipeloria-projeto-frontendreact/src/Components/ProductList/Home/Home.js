@@ -1,7 +1,16 @@
+import { useCallback, useState } from "react"
 import ProductCard from "../ProductCard/ProductCard"
 import { HomeContainer, Produtos, Ordenação, Title, Cards } from "./HomeStyled"
 
 export function Home ({productList}) {
+
+    const [ordination, setOrdination] = useState ("crescente")
+
+    const onChangeOrdination = (event) => {
+        setOrdination(event.target.value)
+    }
+
+    console.log(ordination)
 
     return (
         <HomeContainer>
@@ -9,7 +18,10 @@ export function Home ({productList}) {
             <Produtos>
                 <Ordenação>
                     <p>Ordenação</p>
-                    <button>Crescente</button>
+                    <select onChange={onChangeOrdination} name="tipo" id="tipo">
+                        <option value="crescente">Crescente</option>
+                        <option value="decrescente">Decrescente</option>
+                    </select>
                 </Ordenação>
             </Produtos>
             <Cards>

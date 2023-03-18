@@ -6,8 +6,15 @@ import Home from "./Components/ProductList/Home/Home";
 import Cart from "./Components/ShoppingCart/Cart/Cart";
 //import productList from "./Assets/productList"
 import productList from "./Assets/product.List.json"
+import { useState } from "react";
 
 function App() {
+
+  const [minFilter, setMinFilter] = useState(0)
+  const [maxFilter, setMaxFilter] = useState(0)
+  const [serchFilter, setSerchFilter] = useState("")
+  const [cart, setCart] = useState("")
+  const [amount, setAmount] = useState(0)
 
   return (
     <div>

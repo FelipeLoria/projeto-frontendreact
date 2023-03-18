@@ -3,8 +3,6 @@ import { CardContainer, ButtunAdicionar, Photo } from "./ProductCardStyled"
 
 export function ProductCard (props) {
 
-console.log(props.productList)
-
     return (
         <CardContainer>
             <Photo src={props.productList.imageUrl} alt=""></Photo>
