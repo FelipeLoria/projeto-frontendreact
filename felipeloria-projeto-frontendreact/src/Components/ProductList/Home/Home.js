@@ -1,16 +1,14 @@
-import { useCallback, useState } from "react"
+import { useState } from "react"
 import ProductCard from "../ProductCard/ProductCard"
 import { HomeContainer, Produtos, Ordenação, Title, Cards } from "./HomeStyled"
 
-export function Home ({productList}) {
+export function Home ({productList, amount, setAmount, cart, setCart}) {
 
     const [ordination, setOrdination] = useState ("crescente")
 
     const onChangeOrdination = (event) => {
         setOrdination(event.target.value)
     }
-
-    console.log(ordination)
 
     return (
         <HomeContainer>
@@ -30,6 +28,10 @@ export function Home ({productList}) {
                         <ProductCard
                             key={productList.id}
                             productList={productList}
+                            amount={amount}
+                            setAmount={setAmount}
+                            cart={cart}
+                            setCart={setCart}
                         ></ProductCard>
                     )
                 })}
