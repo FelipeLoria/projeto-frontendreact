@@ -12,6 +12,6 @@ export const Container = styled.div`
 display: flex;
 flex-direction: row;
 width: 100vw;
-height: 100vh;
+height: 100%;
 gap: 1vw
 `
