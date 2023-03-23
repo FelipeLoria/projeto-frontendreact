@@ -39,7 +39,7 @@ export function Home ({productList, amount, setAmount, cart, setCart, minFilter,
                         return productList
                     }
                 }).filter((productList)=>{
-                    return searchFilter? productList.value.includes(searchFilter):productList
+                    return searchFilter? productList.name.includes(searchFilter):productList
                 }).sort((a,b)=>{
                     if (ordination === "crescente") {
                         return a.value-b.value

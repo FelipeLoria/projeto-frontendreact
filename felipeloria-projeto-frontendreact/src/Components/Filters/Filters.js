@@ -1,4 +1,4 @@
-import { ContainerFilter, Filter, Form, Input } from "./FiltersStyle"
+import { ContainerFilter, Filter, Form, Input, Label } from "./FiltersStyle"
 import React from "react"
 
 function Filters ({minFilter, onChangeMinFilter, maxFilter, onChangeMaxFilter, searchFilter, setSearchFilter, onChangeSearchFilter}) {
@@ -7,19 +7,18 @@ function Filters ({minFilter, onChangeMinFilter, maxFilter, onChangeMaxFilter, s
         <ContainerFilter>
             <Filter>Filters</Filter>
             <Form>
-                <label>
-                    Valor Mínimo:
+                <Label>
+                    <p>Valor Mínimo:      </p>
                     <Input value={minFilter} onChange={onChangeMinFilter}/>
-                </label>
-                <label>
-                    Valor Máximo:
+                </Label>
+                <Label>
+                    <p>Valor Máximo:</p>
                     <Input value={maxFilter} onChange={onChangeMaxFilter} />
-                </label>
-
-                <label>
-                    Busca por nome:
+                </Label>
+                <Label>
+                    <p>Busca por nome:</p>
                     <Input value={searchFilter} onChange={onChangeSearchFilter} />
-                </label>
+                </Label>
             </Form>
         </ContainerFilter>
     )

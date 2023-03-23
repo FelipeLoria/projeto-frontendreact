@@ -6,10 +6,10 @@ export const HomeContainer = styled.main`
     grid-template-rows: 1fr 20fr;
     align-items: start;
     justify-items: start;
-    width: 60vw;
+    width: 70vw;
     height: 200vh;
     border: 1px solid white;
-    gap: 2vh
+    gap: 1vh
 `
 
 export const Title = styled.p`

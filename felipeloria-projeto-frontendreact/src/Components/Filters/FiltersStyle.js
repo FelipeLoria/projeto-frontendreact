@@ -8,7 +8,7 @@ export const ContainerFilter = styled.main`
     align-items: center;
     justify-content: start;
     gap: 64px;
-    width: 20vw;
+    width: 15vw;
     height: 200vh;
     border: 1px solid white;
 `
@@ -27,4 +27,9 @@ export const Form = styled.div`
 export const Input = styled.input`
     width: 10vw;
     padding: 8px;
+`
+
+export const Label = styled.div`
+    display: flex;
+    flex-direction: column;
 `
